@@ -1,0 +1,25 @@
+.popup__input-error {
+  font-family: 'Inter', 'Arial', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  display: inline-block;
+  width: 358px;
+  height: 14px;
+  color: #FF0000;
+  /* visibility: hidden; */
+}
+
+.popup__input-error:last-of-type {
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 690px) {
+  .popup__input-error {
+    max-width: 240px;
+  }
+
+  .popup__input-error:first-of-type {
+    margin-bottom: 5px;
+  }
+}

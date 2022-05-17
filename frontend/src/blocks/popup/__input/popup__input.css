@@ -1,0 +1,27 @@
+.popup__input {
+  width: 356px; /* Не 358 из-за padding */
+  margin: 16px 0 5px 0;
+  border: none;
+  border-bottom: 1px solid #c4c4c4;
+  /* border-color: rgb(0, 0, 0, 0.2); */
+  font-family: 'Inter', 'Arial', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  padding: 5px 0 13px 2px;
+}
+
+.popup__input:last-of-type {
+  margin: 0 0 5px 0;
+}
+
+@media screen and (max-width: 690px) {
+  .popup__input {
+    width: 238px;
+    margin: 50px 0 5px 0;
+  }
+
+  .popup__input:last-of-type {
+    margin: 0 0 5px 0;
+  }
+}

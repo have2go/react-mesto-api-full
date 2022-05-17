@@ -1,0 +1,6 @@
+.elements__card {
+  border-radius: 10px;
+  display: grid;
+  grid-template-rows: 282px 1fr;
+  position: relative;
+}

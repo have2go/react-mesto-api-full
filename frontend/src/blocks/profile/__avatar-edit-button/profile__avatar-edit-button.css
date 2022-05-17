@@ -1,0 +1,5 @@
+.profile__avatar-edit-button {
+    background-image: url(../../../images/avatar-pencil.svg);
+    width: 26px;
+    height: 26px;
+}

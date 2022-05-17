@@ -1,0 +1,8 @@
+.elements__like-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 22px;
+    max-height: 35px;
+    margin-right: 15px;
+}

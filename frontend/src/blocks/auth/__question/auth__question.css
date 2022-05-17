@@ -1,0 +1,9 @@
+.auth__question {
+    font-family: 'Inter', 'Arial', sans-serif;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    margin: 0;
+}
