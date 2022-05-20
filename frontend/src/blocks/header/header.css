@@ -3,9 +3,9 @@
   display: flex;
   justify-content: space-between;
   max-width: 880px;
-  padding-top: 31.6px;
-  width: 70%;
+  width: 100%;
   margin: 0 auto;
+  padding-top: 45px;
 }
 
  @media screen and (max-width: 950px) {
@@ -17,7 +17,6 @@
 @media screen and (max-width: 690px) {
   .header {
     width: 100%;
-    max-width: 100%;
     margin: 0;
     padding-top: 28px;
     justify-content: space-around;

@@ -16,9 +16,3 @@
 .auth__input:focus {
     outline: none;
   }
-
-  @media screen and (max-width: 1279px) {
-      .auth__input {
-          width: 300px;
-      }      
-  }

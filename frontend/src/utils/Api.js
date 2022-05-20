@@ -1,7 +1,6 @@
 class Api {
     constructor(options) {
         this._baseUrl = options.baseUrl;
-        this._token = options.headers.authorization;
     }
 
     _resolveCheck(res) {
@@ -14,7 +13,8 @@ class Api {
     getUserInfo() {
         return fetch(this._baseUrl + "/users/me", {
             headers: {
-                authorization: this._token,
+                'Content-Type': 'application/json',
+                Authorization: this._token,
             },
         }).then(this._resolveCheck);
     }
@@ -22,7 +22,8 @@ class Api {
     getInitialCards() {
         return fetch(this._baseUrl + "/cards", {
             headers: {
-                authorization: this._token,
+                'Content-Type': 'application/json',
+                Authorization: this._token,
             },
         }).then(this._resolveCheck);
     }
@@ -31,8 +32,8 @@ class Api {
         return fetch(this._baseUrl + "/users/me", {
             method: "PATCH",
             headers: {
-                authorization: this._token,
-                "Content-Type": "application/json",
+                'Content-Type': 'application/json',
+                Authorization: this._token,
             },
             body: JSON.stringify({
                 name: data.name,
@@ -45,8 +46,8 @@ class Api {
         return fetch(this._baseUrl + "/cards", {
             method: "POST",
             headers: {
-                authorization: this._token,
-                "Content-Type": "application/json",
+                'Content-Type': 'application/json',
+                Authorization: this._token,
             },
             body: JSON.stringify({
                 name: name,
@@ -59,18 +60,18 @@ class Api {
         return fetch(this._baseUrl + `/cards/${_id}`, {
             method: "DELETE",
             headers: {
-                authorization: this._token,
-                "Content-Type": "application/json",
+                'Content-Type': 'application/json',
+                Authorization: this._token,
             },
         }).then(this._resolveCheck);
     }
 
     changeLikeCardStatus(_id, isLiked) {
-        return fetch(this._baseUrl + `/cards/likes/${_id}`, {
+        return fetch(this._baseUrl + `/cards/${_id}/likes`, {
             method: isLiked ? "PUT" : "DELETE",
             headers: {
-                authorization: this._token,
-                "Content-Type": "application/json",
+                'Content-Type': 'application/json',
+                Authorization: this._token
             },
         }).then(this._resolveCheck);
     }
@@ -79,22 +80,23 @@ class Api {
         return fetch(this._baseUrl + "/users/me/avatar", {
             method: "PATCH",
             headers: {
-                authorization: this._token,
-                "Content-Type": "application/json",
+                'Content-Type': 'application/json',
+                Authorization: this._token
             },
             body: JSON.stringify({
                 avatar: link,
             }),
         }).then(this._resolveCheck);
     }
+    setToken(token) {
+        localStorage.setItem('jwt', token);
+        this._token = token;
+      }
+
 }
 
 const api = new Api({
-    baseUrl: "https://mesto.nomoreparties.co/v1/cohort-28",
-    headers: {
-        authorization: "fbabf2a1-b60d-4ec5-acf1-d3bcd274680a",
-        "Content-Type": "application/json",
-    },
+    baseUrl: "https://api.ad.mesto.students.nomoreparties.sbs",
 });
 
 export default api;

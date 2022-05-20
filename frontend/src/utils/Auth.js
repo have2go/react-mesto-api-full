@@ -1,4 +1,4 @@
-const base_url = "https://auth.nomoreparties.co";
+const base_url = "https://api.ad.mesto.students.nomoreparties.sbs";
 
 function resolveCheck(res) {
     if (res.ok) {
@@ -45,8 +45,9 @@ export const checkToken = (jwt) => {
     return fetch(base_url + "/users/me", {
         method: "GET",
         headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${jwt}`,
-        },
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            'Authorization': jwt,
+        }
     }).then(resolveCheck);
 };

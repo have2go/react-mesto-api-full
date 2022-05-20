@@ -3,6 +3,6 @@
   
 Ссылка на сайт: https://ad.mesto.nomoredomains.xyz/
 
-Домен для обращения к серверу: api.ad.mesto.students.nomoreparties.sbs
+Домен для обращения к серверу: https://api.ad.mesto.students.nomoreparties.sbs
 
-Публичный IP: 51.250.108.145
+Публичный IP: http://51.250.108.145

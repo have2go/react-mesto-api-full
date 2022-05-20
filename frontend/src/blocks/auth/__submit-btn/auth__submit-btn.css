@@ -8,20 +8,12 @@
     line-height: 22px;
     text-align: center;
     color: #000000;
-    margin: 0;
+    margin: 216px 0 0;
     padding: 0;
     border: none;
-    align-self: flex-end;
-    margin-top: 200px;
   }
 
 .auth__submit-btn:hover {
     opacity: 0.8;
     cursor: pointer;
-}
-
-@media screen and (max-width: 690px) {
-  .auth__submit-btn {
-    margin-top: 172px;
-  }    
 }

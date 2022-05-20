@@ -1,5 +1,5 @@
 .auth__form {
     display: flex;
     flex-direction: column;
-    align-content: space-between;
+    justify-content: center; 
   }
