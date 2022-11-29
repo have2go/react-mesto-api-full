@@ -1,4 +1,4 @@
-const base_url = "https://api.ad.mesto.students.nomoreparties.sbs";
+const base_url = "http://localhost:3001";
 
 function resolveCheck(res) {
     if (res.ok) {

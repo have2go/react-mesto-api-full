@@ -96,7 +96,7 @@ class Api {
 }
 
 const api = new Api({
-    baseUrl: "https://api.ad.mesto.students.nomoreparties.sbs",
+    baseUrl: "http://localhost:3001",
 });
 
 export default api;
